@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mathew's Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (same on every page) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="images/Mathew Fernandez Logo 3.png" alt="Mathew's Portfolio logo">
+    </a>
+
+    <nav class="main-nav">
+      <a href="about.html">About Me</a>
+      <a href="my-projects.html">My Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== CONTACT ===== -->
+  <main class="project-page contact-page">
+    <h1 class="contact-heading">Let&rsquo;s Work Together!</h1>
+
+    <!-- Sends messages to your email through FormSubmit (formsubmit.co) -->
+    <form class="contact-form" action="https://formsubmit.co/matt.fernandez2323@gmail.com" method="POST">
+      <!-- FormSubmit settings (hidden from visitors) -->
+      <input type="hidden" name="_subject" value="New message from your portfolio site">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Where visitors go after submitting. Must be a FULL web address.
+           While testing with Live Server, use the 127.0.0.1 address below.
+           Once your site is online, change it to your real address,
+           e.g. https://www.yoursite.com/thank-you.html -->
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+      <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+      <div class="form-row">
+        <label class="visually-hidden" for="first-name">First Name</label>
+        <input type="text" id="first-name" name="First Name" placeholder="First Name" autocomplete="given-name" required>
+
+        <label class="visually-hidden" for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="Last Name" placeholder="Last Name" autocomplete="family-name" required>
+      </div>
+
+      <label class="visually-hidden" for="email">E-Mail</label>
+      <input type="email" id="email" name="email" placeholder="E-Mail" autocomplete="email" required>
+
+      <label class="visually-hidden" for="subject">Subject</label>
+      <input type="text" id="subject" name="Subject" placeholder="Subject" required>
+
+      <label class="visually-hidden" for="message">Message</label>
+      <textarea id="message" name="Message" placeholder="Message" rows="8" required></textarea>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </main>
+
+</body>
+</html>
